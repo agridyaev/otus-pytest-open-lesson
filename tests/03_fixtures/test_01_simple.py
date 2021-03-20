@@ -23,3 +23,7 @@ def test_data_2(data_2):
 
 def test_data_3(data_3):
     assert data_3 == 3
+
+
+def test_db(db_name):
+    assert db_name == 'db_name'
