@@ -24,8 +24,8 @@ def test_positive():
 
 @pytest.mark.parametrize('a, result', [
     (-1, 'negative'),
-    (0, 'zero'),
-    (1, 'positive')
+    (0,  'zero'),
+    (1,  'positive')
 ])
 def test_all_cases(a, result):
     assert func(a) == result
