@@ -6,11 +6,14 @@ import pytest
 
 @pytest.fixture
 def data_1():
+    """Return 1"""
+    print('\nReturn 1')
     return 1
 
 
 @pytest.fixture
 def print_hello():
+    """Print greetings"""
     print('\nHello')
 
 
