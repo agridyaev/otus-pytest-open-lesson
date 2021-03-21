@@ -17,6 +17,11 @@ def print_hello():
     print('\nHello')
 
 
+def test_builtin_fixt(request, tmp_path):
+    print(f'addopts: {request.config.getoption("verbose")}')
+    print(f'unique tmp path: {tmp_path}')
+
+
 def test_data_1(data_1, print_hello):
     assert data_1 == 1
 
