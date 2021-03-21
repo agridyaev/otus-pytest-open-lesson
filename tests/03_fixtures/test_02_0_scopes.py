@@ -3,36 +3,44 @@ import pytest
 
 @pytest.fixture(scope='function')
 def func_scope():
-    pass
+    print('Function scope setup')
+    yield
+    print('Function scope teardown')
 
 
 @pytest.fixture(scope='module')
 def mod_scope():
-    pass
+    print('Module scope setup')
+    yield
+    print('Module scope teardown')
 
 
 @pytest.fixture(scope='session')
 def sess_scope():
-    pass
+    print('Session scope setup')
+    yield
+    print('Session scope teardown')
 
 
 @pytest.fixture(scope='class')
 def class_scope():
-    pass
+    print('Class scope setup')
+    yield
+    print('Class scope teardown')
 
 
 def test_1(sess_scope, mod_scope, func_scope):
-    pass
+    print('Run test_1')
 
 
 def test_2(sess_scope, mod_scope, func_scope):
-    pass
+    print('Run test_2')
 
 
 @pytest.mark.usefixtures('class_scope')
 class TestSomething:
     def test_3(self):
-        pass
+        print('Run test_3')
 
     def test_4(self):
-        pass
+        print('Run test_4')
