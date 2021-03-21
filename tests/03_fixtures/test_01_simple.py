@@ -1,5 +1,6 @@
 import pytest
 
+# $ pytest --fixtures-per-test
 # $ pytest --setup-show
 
 
