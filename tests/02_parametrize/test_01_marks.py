@@ -20,3 +20,8 @@ def test_fail_comparison():
 @pytest.mark.xfail(raises=(AssertionError, TimeoutError))
 def test_fail_exception():
     raise AssertionError
+
+
+@pytest.mark.slow
+def test_slow():
+    assert 1 == 1
