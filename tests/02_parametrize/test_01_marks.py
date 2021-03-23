@@ -1,5 +1,6 @@
 import pytest
 import sys
+import time
 
 
 @pytest.mark.skip(reason='Skipped test example')
@@ -23,5 +24,6 @@ def test_fail_exception():
 
 
 @pytest.mark.slow
-def test_slow():
+def test_custom_mark():
+    time.sleep(3)
     assert 1 == 1
