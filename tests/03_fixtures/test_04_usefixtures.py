@@ -2,11 +2,11 @@ import pytest
 
 
 @pytest.fixture
-def class_fixt():
-    print('\nclass_fixt started')
+def func_fixt():
+    print('\nfunc_fixt started')
 
 
-@pytest.mark.usefixtures('class_fixt')
+@pytest.mark.usefixtures('func_fixt')
 class TestSomething:
     def test_3(self):
         print('test_3 started')
