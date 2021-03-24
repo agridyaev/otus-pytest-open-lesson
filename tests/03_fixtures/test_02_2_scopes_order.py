@@ -31,6 +31,5 @@ def sess(order):
     order.append("session")
 
 
-class TestClass:
-    def test_order(self, func, cls, mod, pack, sess, order):
-        assert order == ["session", "package", "module", "class", "function"]
+def test_order(func, cls, mod, pack, sess, order):
+    assert order == ["session", "package", "module", "class", "function"]
